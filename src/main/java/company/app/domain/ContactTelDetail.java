@@ -1,4 +1,4 @@
-package app.domain;
+package company.app.domain;
 
 import javax.persistence.*;
 import static javax.persistence.GenerationType.IDENTITY;
