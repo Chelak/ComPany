@@ -34,7 +34,7 @@ public class Contact
     private Set<ContactTelDetail> contactTelDetails =  new HashSet<ContactTelDetail>();
 
     @ManyToMany
-    @JoinTable(name = "contact_hobby_detail", joinColumns = @JoinColumn(name = "CONTACT_ID"),inverseJoinColumns = @JoinColumn(name = "HOBBY_ID"))
+    @JoinTable(name = "contact_hobby_detail", joinColumns = @JoinColumn(name = "contact_id"),inverseJoinColumns = @JoinColumn(name = "hobby_id"))
     private Set<Hobby> hobbies = new HashSet<Hobby>();
 
 
