@@ -1,6 +1,8 @@
 package company.app.domain;
 import javax.persistence.*;
 import static javax.persistence.GenerationType.IDENTITY;
+
+import java.io.Serializable;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -10,7 +12,7 @@ import java.util.Set;
  */
 @Entity
 @Table(name = "contact")
-public class Contact
+public class Contact implements Serializable
 {
 
     @Id
@@ -30,6 +32,7 @@ public class Contact
     @Temporal(TemporalType.DATE)
     @Column(name = "birth_date")
     private Date birthDate;
+
     @OneToMany(mappedBy = "contact", cascade=CascadeType.ALL,orphanRemoval=true)
     private Set<ContactTelDetail> contactTelDetails =  new HashSet<ContactTelDetail>();
 

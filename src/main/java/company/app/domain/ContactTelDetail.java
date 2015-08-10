@@ -1,13 +1,15 @@
 package company.app.domain;
 
 import javax.persistence.*;
+import java.io.Serializable;
+
 import static javax.persistence.GenerationType.IDENTITY;
 /**
  * Created by user on 8/10/15.
  */
 @Entity
 @Table(name = "contact_tel_detail")
-public class ContactTelDetail
+public class ContactTelDetail implements Serializable
 {
     @Id
     @GeneratedValue(strategy = IDENTITY)

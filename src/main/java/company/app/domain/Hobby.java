@@ -1,6 +1,7 @@
 package company.app.domain;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -9,7 +10,7 @@ import java.util.Set;
  */
 @Entity
 @Table(name = "hobby")
-public class Hobby
+public class Hobby implements Serializable
 {
     @Id
     @Column(name = "hobby_id")
